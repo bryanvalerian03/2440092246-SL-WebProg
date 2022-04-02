@@ -12,7 +12,10 @@
     </style>
 </head>
 <body style="background-color:#cad1ff">
-        <?php  session_start(); ?>
+        <?php  session_start();
+                if(!$_SESSION["login"]){
+                    header("location:./login.php");
+                } print_r($_SESSION["row"]);?>
     <nav style="display:flex; justify-content:space-between;background-color:#f9ffca;height:1cm;">
         <p style="float: left;margin-top:0.2cm;margin-left:0.5cm">Aplikasi Pengelolaan Keuangan</p>
         <div class="menu" style="margin-top:0.2cm;margin-right:1cm">
@@ -24,7 +27,7 @@
 
     <span style="display: flex;justify-content:center;margin-top:15%;font-size:30px">
         <p >
-            Hello&nbsp; <p style="font-weight: bold;"><?php echo $_SESSION["nama-depan"]." ", $_SESSION["nama-tengah"]." "  , $_SESSION['nama-belakang'] ?></p>, Selamat datang di Aplikasi Pengelolaan Keuangan
+            Hello&nbsp; <p style="font-weight: bold;"><?php echo $_SESSION["row"]["nama_depan"]." ", $_SESSION["row"]["nama_tengah"]." "  , $_SESSION["row"]['nama_belakang'] ?></p>, Selamat datang di Aplikasi Pengelolaan Keuangan
         </p>
     </span>
 </body>

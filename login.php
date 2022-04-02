@@ -9,6 +9,9 @@
 <body style="background-color:#fbfdac">
     <?php
         session_start();
+        if($_SESSION["login"]){
+            header("location:./home.php");
+        }
     ?>
     <h2 style="text-align: center;margin-top:5%">Login</h2>
     <div class="box" style="width: 40%;margin:7% 30% 30% 30%;background-color:#ace6fd;text-align:center">

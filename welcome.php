@@ -1,3 +1,9 @@
+<?php
+    // include("config.php");
+    // $str_query = "SELECT username FROM MsUser WHERE username = '".$_POST["username"]."'";
+    // echo $str_query;
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
