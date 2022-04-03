@@ -15,7 +15,9 @@
         <?php  session_start();
                 if(!$_SESSION["login"]){
                     header("location:./login.php");
-                } print_r($_SESSION["row"]);?>
+                } 
+                // print_r($_SESSION["row"]);
+                ?>
     <nav style="display:flex; justify-content:space-between;background-color:#f9ffca;height:1cm;">
         <p style="float: left;margin-top:0.2cm;margin-left:0.5cm">Aplikasi Pengelolaan Keuangan</p>
         <div class="menu" style="margin-top:0.2cm;margin-right:1cm">

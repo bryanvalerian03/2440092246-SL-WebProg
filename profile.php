@@ -12,7 +12,9 @@
     </style>
 </head>
 <body style="background-color:#cad1ff">
-        <?php  session_start(); 
+        <?php  session_start();
+        $_SESSION["emailError"] = "";
+        $_SESSION["NIKerror"] = ""; 
         if(!$_SESSION["login"]){
             header("location:./login.php");
         }
@@ -87,6 +89,6 @@
             </div>
         </div>
 
-        <a href="./editProfile.php">Edit Profile</a>
+        <a href="./editProfile.php" style="margin-left:2cm">Edit Profile</a>
 </body>
 </html>
